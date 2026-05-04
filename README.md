@@ -81,12 +81,11 @@ Il sistema è progettato con un approccio **human-in-the-loop**: prima di ogni i
 
 Il deploy avviene **esclusivamente in locale** sulle macchine dei membri autorizzati del team amministrativo.
 
-### 1. Clona o scarica il progetto
+### 1. Clona o scarica il progetto da Github
 
-```bash
-git clone <repo-url>
-cd zucchetti-mailer
-```
+[H-IS Zucchetti Mailer Repository Github](https://github.com/pistolatoandrea/H-IS-Zucchetti-Mailer)
+
+Code -> Download ZIP
 
 ### 2. Crea il file `.env`
 
@@ -111,6 +110,12 @@ docker compose down
 ```
 
 ---
+
+## Guida Utenti
+
+Da condividere con gli utenti che dovranno installare e far girare l'applicazione in locale
+
+[Guida Operativa H-IS Mailer](https://docs.google.com/document/d/e/2PACX-1vTkWENJ8ykZN-6Gh3A5VCG7qj09r1uwBKoXrut1KgtWIYW6vXPPqlC0AD9WfEqCbQ/pub)
 
 ## Configurazione
 
@@ -165,17 +170,22 @@ BREVO_TEMPLATES=Sollecito Rata:42,Secondo Sollecito:43
 ## Struttura del progetto
 
 ```
-zucchetti-mailer/
-├── main.py               # Backend FastAPI
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── .env.example
-├── templates/
-│   └── index.html        # UI principale
-├── static/               # CSS, JS, assets
-├── Brevo Log/            # Log CSV degli invii (auto-generati)
-└── output_csv/           # CSV scaricati da Zucchetti (auto-generati)
+cartella-principale/
+├── Avvio.command
+├── Guida_Zucchetti_Mailer.docx
+├── Readme.md
+└── H-IS-Zucchetti-Mailer-main/           <-- Cartella contenente tutti i file tecnici
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── render.yaml
+    ├── main.py
+    ├── requirements.txt
+    ├── .env
+    ├── .env.example
+    ├── templates/
+    ├── static/
+    ├── Brevo Log/
+    └── output_csv/
 ```
 
 ---
